@@ -12,6 +12,7 @@ namespace BookStore.Models
         [Required]
         [StringLength(50)]
         [Display(Name = "Author Name")]
+        [RegularExpression(@"^[a-zA-Z0-9 ]+$", ErrorMessage = "The name must contain only letters, numbers, and spaces.")]
         public string Name { get; set; }
 
         [Required]
