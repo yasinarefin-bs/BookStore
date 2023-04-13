@@ -1,4 +1,4 @@
-﻿@model AuthorDetailsViewModel
+﻿@model Book
 
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -8,31 +8,19 @@
 
 <div class="row">
         <div class="col-md-4">
-          <img src="@Model.Author.ImageUrl" class="img-fluid rounded-circle">
+          <img src="@Model.CoverPicUrl" class="img-fluid rounded-circle">
         </div>
         <div class="col-md-8">
-          <h1>@Model.Author.Name</h1>
-          <p>@Model.Author.Address<br>
+          <h1>@Model.Name</h1>
+          <p>Author: <a asp-controller="Author" asp-action="Details" asp-route-id="@Model.Author.Id">@Model.Author.Name</a><br>
           Email: @Model.Author.Email</p>
-          <button class="btn btn-primary">Update</button>
+          <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-primary">Update</a>
           <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">Delete</button>
         </div>
       </div>
 
 <hr />
 
-<h2>List of books by @Model.Author.Name</h2>
-<ul class="list-group">
-    @foreach(var book in Model.ListOfBooks)
-    {
-        
-        <li class="list-group-item list-group-item-info">
-            @book.Name
-            <a asp-controller="Book" asp-action="Details" asp-route-id="@book.Id" class="btn btn-outline-primary">View</a>
-        </li>
-    }
-    
-</ul>
 
 
 <!-- Modal -->
@@ -46,17 +34,12 @@
         </button>
       </div>
       <div class="modal-body">
-          <h6>List of books that will be deleted</h6>
-          <ul>
-              @foreach(var book in Model.ListOfBooks)
-                {
-                    <li>@book.Name</li>    
-                }
-          </ul>
+         <h6>Confirm that you want to delete this book.</h6>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <form method="post" asp-action="Delete" asp-route-id="@Model.Author.Id">
+        <form method="post" asp-action="Delete" asp-route-id="@Model.Id">
             <button type="submit" class="btn btn-danger">Delete</button>
         </form>
         

@@ -1,0 +1,55 @@
+﻿@model Book
+
+
+
+<h1>Update @Model.Name</h1>
+
+<h4>Book</h4>
+<hr />
+
+
+<form asp-action="Update" method="post" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label asp-for="Name" class="col-form-label">Name:</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="col-form-label">Description:</label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Language" class="col-form-label">Language:</label>
+        <input asp-for="Language" class="form-control" />
+        <span asp-validation-for="Language" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CoverPicUrl" class="col-form-label">Cover Picture URL:</label>
+        <input asp-for="CoverPicUrl" class="form-control" />
+        <span asp-validation-for="CoverPicUrl" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AuthorId" class="col-form-label">Author:</label>
+        <select asp-for="AuthorId" class="form-control">
+            <option value="">-- Select an author --</option>
+            @foreach (var author in ViewBag.Authors)
+            {
+                <option value="@author.Id">
+                    @author.Name
+                </option>
+            }
+        </select>
+        <span asp-validation-for="AuthorId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+
+
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

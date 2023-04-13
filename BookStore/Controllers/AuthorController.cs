@@ -40,6 +40,58 @@ namespace BookStore.Controllers
 
             return View(viewModel);
         }
+
+        public IActionResult Update(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var authorObject = _db.Authors.FirstOrDefault(x => x.Id == id);
+
+            if (authorObject == null)
+            {
+                return NotFound();
+            }
+            return View(authorObject);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(Author obj)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Authors.Update(obj);
+                _db.SaveChanges();
+
+                TempData["Success"] = "Author updated successfully.";
+                return RedirectToAction(nameof(Index));
+            }
+            return View(obj);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+            var authorObj = _db.Authors.Find(id);
+            if(authorObj == null)
+            {
+                return NotFound();
+            }
+            _db.Authors.Remove(authorObj);
+            _db.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
         public IActionResult Create()
         {
             return View();

@@ -57,5 +57,82 @@ namespace BookStore.Controllers
             ViewBag.Authors = authors;
             return View(obj);
         }
+
+        public IActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var bookObject = _db.Books.Include(book=>book.Author).Where(book=>book.Id == id).First();
+
+            if (bookObject == null)
+            {
+                return NotFound();
+            }
+
+            return View(bookObject);
+        }
+
+        public IActionResult Update(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var bookObject = _db.Books.Find(id);
+
+            if (bookObject == null)
+            {
+                return NotFound();
+            }
+            var authors = _db.Authors.ToList();
+            ViewBag.Authors = authors;
+
+            return View(bookObject);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(Book obj)
+        {
+            ModelState.Remove("Author");
+            if (ModelState.IsValid)
+            {
+                _db.Books.Update(obj);
+                _db.SaveChanges();
+
+                TempData["Success"] = "Book updated successfully.";
+                return RedirectToAction(nameof(Index));
+            }
+
+            var authors = _db.Authors.ToList();
+            ViewBag.Authors = authors;
+
+            return View(obj);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var bookObject = _db.Books.Find(id);
+
+            if (bookObject == null)
+            {
+                return NotFound();
+            }
+            _db.Books.Remove(bookObject);
+            _db.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
