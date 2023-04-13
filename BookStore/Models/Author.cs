@@ -19,6 +19,10 @@ namespace BookStore.Models
         [StringLength(500)]
         public string Address { get; set; }
 
+        [Required]
+        [StringLength(500)]
+        [EmailAddress]
+        public string Email { get; set; }
 
         [StringLength(500)]
         public string ImageUrl { get; set; }

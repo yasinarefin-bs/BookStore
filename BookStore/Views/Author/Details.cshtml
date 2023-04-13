@@ -1,0 +1,29 @@
+﻿@model AuthorDetailsViewModel
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="row">
+        <div class="col-md-4">
+          <img src="@Model.Author.ImageUrl" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-8">
+          <h1>@Model.Author.Name</h1>
+          <p>@Model.Author.Address<br>
+          Email: @Model.Author.Email</p>
+        </div>
+      </div>
+
+<hr />
+
+<h2>List of books by @Model.Author.Name</h2>
+<ul>
+    @foreach(var book in Model.ListOfBooks)
+    {
+        <li>@book.Name</li>    
+    }
+    
+</ul>

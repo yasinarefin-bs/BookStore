@@ -19,7 +19,27 @@ namespace BookStore.Controllers
             var authorList = _db.Authors.ToList();
             return View(authorList);
         }
+        public IActionResult Details(int? id)
+        { 
+            if(id == null)
+            {
+                return NotFound();
+            }
 
+            var authorObject = _db.Authors.FirstOrDefault(x => x.Id == id);
+
+            if(authorObject == null)
+            {
+                return NotFound();
+            }
+
+            var viewModel = new AuthorDetailsViewModel() {
+                Author = authorObject,
+                ListOfBooks = _db.Books.Where(book => book.AuthorId==id).ToList()
+            };
+
+            return View(viewModel);
+        }
         public IActionResult Create()
         {
             return View();
