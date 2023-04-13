@@ -1,4 +1,5 @@
 ﻿
+using BookStore.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 
@@ -11,9 +12,9 @@ namespace BookStpre.Data
             
         }
 
-        // public DbSet<Employee> Employees { get; set; }
+        public DbSet<Book> Books { get; set; }
 
-       // public DbSet<Room> Rooms { get; set; }
+        public DbSet<Author> Authors { get; set; }
 
 
     }

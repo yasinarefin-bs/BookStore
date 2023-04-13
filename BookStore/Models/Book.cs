@@ -12,6 +12,7 @@ namespace BookStore.Models
 
         [Required]
         [StringLength(60)]
+        [Display(Name = "Book Title")]
         public string Name { get; set; }
 
         [Required]

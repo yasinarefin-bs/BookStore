@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 namespace BookStore.Models
 {
     public class Author
@@ -12,6 +11,7 @@ namespace BookStore.Models
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Author Name")]
         public string Name { get; set; }
 
         [Required]
