@@ -14,7 +14,7 @@
           <h1>@Model.Author.Name</h1>
           <p>@Model.Author.Address<br>
           Email: @Model.Author.Email</p>
-          <button class="btn btn-primary">Update</button>
+          <a class="btn btn-primary" asp-action="Update" asp-route-id="@Model.Author.Id">Update</a>
           <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">Delete</button>
         </div>
       </div>
