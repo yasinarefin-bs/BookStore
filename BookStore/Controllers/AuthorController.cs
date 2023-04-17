@@ -1,6 +1,10 @@
 ﻿using BookStore.Models;
 using BookStpre.Data;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using BookStore.Util;
+using System.Net;
+using System.Xml.Linq;
 
 namespace BookStore.Controllers
 {
@@ -8,11 +12,14 @@ namespace BookStore.Controllers
     {
         private readonly SqlDbContext _db;
         private readonly ILogger<BookController> _logger;
+        private readonly IWebHostEnvironment _env;
 
-        public AuthorController(SqlDbContext context, ILogger<BookController> logger) 
+
+        public AuthorController(SqlDbContext context, ILogger<BookController> logger, IWebHostEnvironment env) 
         {
             _db = context;
             _logger = logger;
+            _env = env;
         }
         public IActionResult Index()
         {
@@ -49,23 +56,42 @@ namespace BookStore.Controllers
             }
 
             var authorObject = _db.Authors.FirstOrDefault(x => x.Id == id);
-
             if (authorObject == null)
             {
                 return NotFound();
             }
-            return View(authorObject);
+
+            var authorViewModel = new AuthorViewModel() {
+                Name = authorObject.Name,
+                Address = authorObject.Address,
+                Email = authorObject.Email,
+            };
+            
+            return View(authorViewModel);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(Author obj)
+        public IActionResult Update(AuthorViewModel obj)
         {
             if (ModelState.IsValid)
             {
-                _db.Authors.Update(obj);
-                _db.SaveChanges();
+                // saves and returns unique filename
+                var fileName = ImageUtil.SaveImage(obj.AuthorPicture, "author", _env);
 
-                TempData["Success"] = "Author updated successfully.";
+
+                var authorObj = new Author() 
+                {
+                    Id = obj.Id,
+                    Name = obj.Name,
+                    Email = obj.Email,
+                    Address = obj.Address,
+                    ImageUrl = $"/image/author/{fileName}"
+
+                };
+
+                _db.Authors.Update(authorObj);
+                _db.SaveChanges();
+                TempData["Success"] = "Author created successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View(obj);
@@ -99,16 +125,30 @@ namespace BookStore.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Author obj)
+        public IActionResult Create(AuthorViewModel obj)
         {
             if (ModelState.IsValid)
             {
-                _db.Authors.Add(obj);
+                // saves and returns unique filename
+                var fileName = ImageUtil.SaveImage(obj.AuthorPicture, "author",  _env);
+
+
+                var authorObj = new Author()
+                {
+                    Name = obj.Name,
+                    Email = obj.Email,
+                    Address = obj.Address,
+                    ImageUrl = $"/image/author/{fileName}"
+
+                };
+
+                _db.Authors.Add(authorObj);
                 _db.SaveChanges();
                 TempData["Success"] = "Author created successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View(obj);
         }
+
     }
 }

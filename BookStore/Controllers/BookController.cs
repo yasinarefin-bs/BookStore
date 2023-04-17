@@ -1,4 +1,5 @@
 ﻿using BookStore.Models;
+using BookStore.Util;
 using BookStpre.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,11 +12,13 @@ namespace BookStore.Controllers
 
         private readonly SqlDbContext _db;
         private readonly ILogger<BookController> _logger;
+        private readonly IWebHostEnvironment _env;
 
-        public BookController(SqlDbContext context, ILogger<BookController> logger)
+        public BookController(SqlDbContext context, ILogger<BookController> logger, IWebHostEnvironment env)
         {
             _db = context;
             _logger = logger;
+            _env = env;
         }
         public IActionResult Index()
         {
@@ -29,30 +32,43 @@ namespace BookStore.Controllers
 
             ViewBag.Authors = authors;
 
-            return View(new Book());
+            return View(new BookViewModel());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Book obj)
+        public IActionResult Create(BookViewModel obj)
         {
 
-            ModelState.Remove("Author");
+            ModelState.Remove("Author"); // author is navigation property
 
             if (ModelState.IsValid)
             {
-                _db.Books.Add(obj);
+                var fileName = ImageUtil.SaveImage(obj.CoverPic, "book", _env);
+
+                var bookObj = new Book()
+                {
+                    Name = obj.Name,
+                    Description = obj.Description,
+                    Language = obj.Language,
+                    AuthorId= obj.AuthorId,
+                         
+                    CoverPicUrl = $"/image/book/{fileName}"
+
+                };
+
+                _db.Books.Add(bookObj);
                 _db.SaveChanges();
                 TempData["Success"] = "Book created successfully";
                 return RedirectToAction(nameof(Index));
             }
 
-            var errors = ModelState.Values.SelectMany(v => v.Errors).ToList();
+            //var errors = ModelState.Values.SelectMany(v => v.Errors).ToList();
 
-            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
-            {
-                _logger.LogError(error.ErrorMessage);
-            }
+            //foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            //{
+            //    _logger.LogError(error.ErrorMessage);
+            //}
             var authors = _db.Authors.ToList();
             ViewBag.Authors = authors;
             return View(obj);
@@ -88,22 +104,47 @@ namespace BookStore.Controllers
             {
                 return NotFound();
             }
+
+            var bookViewModel = new BookViewModel()
+            {
+                Id = bookObject.Id,
+                Name = bookObject.Name,
+                Description = bookObject.Description,
+                AuthorId = bookObject.AuthorId,
+                Language = bookObject.Language,
+
+            };
+
             var authors = _db.Authors.ToList();
             ViewBag.Authors = authors;
 
-            return View(bookObject);
+            return View(bookViewModel);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(Book obj)
+        public IActionResult Update(BookViewModel obj)
         {
-            ModelState.Remove("Author");
+            ModelState.Remove("Author"); // author is navigation property
+
             if (ModelState.IsValid)
             {
-                _db.Books.Update(obj);
-                _db.SaveChanges();
+                var fileName = ImageUtil.SaveImage(obj.CoverPic, "book", _env);
 
-                TempData["Success"] = "Book updated successfully.";
+                var bookObj = new Book()
+                {
+                    Id = obj.Id,
+                    Name = obj.Name,
+                    Description = obj.Description,
+                    Language = obj.Language,
+                    AuthorId = obj.AuthorId,
+
+                    CoverPicUrl = $"/image/book/{fileName}"
+
+                };
+
+                _db.Books.Update(bookObj);
+                _db.SaveChanges();
+                TempData["Success"] = "Book created successfully";
                 return RedirectToAction(nameof(Index));
             }
 

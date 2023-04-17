@@ -1,6 +1,4 @@
-﻿@model Author
-
-
+﻿@model AuthorViewModel
 
 <h1>Update @Model.Name</h1>
 
@@ -8,7 +6,7 @@
 <hr />
 
 
-<form asp-action="Update" method="post">
+<form asp-action="Update" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label asp-for="Name" class="control-label"></label>
         <input asp-for="Name" class="form-control" />
@@ -25,9 +23,9 @@
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="ImageUrl" class="control-label"></label>
-        <input asp-for="ImageUrl" class="form-control" />
-        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        <label asp-for="AuthorPicture" class="control-label"></label>
+        <input asp-for="AuthorPicture" type="file" class="form-control-file">
+        <span asp-validation-for="AuthorPicture" class="text-danger"></span>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Update</button>

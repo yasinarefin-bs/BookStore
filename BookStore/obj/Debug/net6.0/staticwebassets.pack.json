@@ -13,6 +13,54 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\R_32ca6a06-0df4-4423-beeb-fb33322d4cf5.jpg",
+      "PackagePath": "staticwebassets\\image\\author\\R_32ca6a06-0df4-4423-beeb-fb33322d4cf5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\R_4f65bee1-3bba-4dbb-ab94-487d7a104f82.jpg",
+      "PackagePath": "staticwebassets\\image\\author\\R_4f65bee1-3bba-4dbb-ab94-487d7a104f82.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\R_72374493-3bd8-47c6-a260-a583a9adf185.jpg",
+      "PackagePath": "staticwebassets\\image\\author\\R_72374493-3bd8-47c6-a260-a583a9adf185.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\ezgif-3-e781ec75a0_58e00756-9ae5-41b8-8aec-c842c4db8458.gif",
+      "PackagePath": "staticwebassets\\image\\author\\ezgif-3-e781ec75a0_58e00756-9ae5-41b8-8aec-c842c4db8458.gif"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\ezgif-3-e781ec75a0_c6bff971-fcf5-46d1-9bbb-6972b979baa8.gif",
+      "PackagePath": "staticwebassets\\image\\author\\ezgif-3-e781ec75a0_c6bff971-fcf5-46d1-9bbb-6972b979baa8.gif"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\ezgif-3-e781ec75a0_e4ef9c57-c1b0-4af8-8c51-4503b3ca894e.gif",
+      "PackagePath": "staticwebassets\\image\\author\\ezgif-3-e781ec75a0_e4ef9c57-c1b0-4af8-8c51-4503b3ca894e.gif"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\R (1)_597ce3dc-4e5b-4c27-bdee-96ec57fda62e.jpg",
+      "PackagePath": "staticwebassets\\image\\book\\R (1)_597ce3dc-4e5b-4c27-bdee-96ec57fda62e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\R_36ab9c73-86a2-45ea-b364-d49353cdc8be.jpg",
+      "PackagePath": "staticwebassets\\image\\book\\R_36ab9c73-86a2-45ea-b364-d49353cdc8be.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\book1_6525ec1b-b7cd-4204-a52d-9a3ad1b2e734.jpg",
+      "PackagePath": "staticwebassets\\image\\book\\book1_6525ec1b-b7cd-4204-a52d-9a3ad1b2e734.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\book1_93908380-f073-46e8-be9a-568d3988fd72.jpg",
+      "PackagePath": "staticwebassets\\image\\book\\book1_93908380-f073-46e8-be9a-568d3988fd72.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\book1_ceb25c2d-91d9-4b63-91ea-45978a57bd65.jpg",
+      "PackagePath": "staticwebassets\\image\\book\\book1_ceb25c2d-91d9-4b63-91ea-45978a57bd65.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\ezgif-3-e781ec75a0_17bb849f-0cfb-4dc4-863a-a588711b20ab.gif",
+      "PackagePath": "staticwebassets\\image\\book\\ezgif-3-e781ec75a0_17bb849f-0cfb-4dc4-863a-a588711b20ab.gif"
+    },
+    {
       "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
