@@ -32,8 +32,5 @@ namespace BookStore.Models
 
         [Required]
         public int AuthorId { get; set; }
-
-        [ForeignKey(nameof(AuthorId))]
-        public Author Author { get; set; }
     }
 }

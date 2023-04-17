@@ -114,6 +114,8 @@ namespace BookStore.Controllers
             _db.Authors.Remove(authorObj);
             _db.SaveChanges();
 
+            ImageUtil.DeleteImage(authorObj.ImageUrl, _env, _logger);
+
             return RedirectToAction(nameof(Index));
         }
 

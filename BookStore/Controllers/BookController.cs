@@ -31,7 +31,7 @@ namespace BookStore.Controllers
             var authors = _db.Authors.ToList();
 
             ViewBag.Authors = authors;
-
+           
             return View(new BookViewModel());
         }
 
@@ -39,8 +39,6 @@ namespace BookStore.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(BookViewModel obj)
         {
-
-            ModelState.Remove("Author"); // author is navigation property
 
             if (ModelState.IsValid)
             {
@@ -124,7 +122,6 @@ namespace BookStore.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Update(BookViewModel obj)
         {
-            ModelState.Remove("Author"); // author is navigation property
 
             if (ModelState.IsValid)
             {
