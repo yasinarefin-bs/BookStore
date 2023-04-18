@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yj9PaKKx2tSdJUuQWAO/njJzID0R9HSBrpv5MrcQoT0=",
+  "Hash": "yoHZTDO1khnH5hO6QwlX0v5/qq4I1TEd978x6xV3Ygc=",
   "Source": "BookStore",
   "BasePath": "_content/BookStore",
   "Mode": "Default",
@@ -765,6 +765,40 @@
       "OriginalItemSpec": "wwwroot\\image\\author\\ezgif-3-e781ec75a0_e4ef9c57-c1b0-4af8-8c51-4503b3ca894e.gif"
     },
     {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\got_2aac419f-b3ca-43a9-86b4-8e2b84ef0d61.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/author/got_2aac419f-b3ca-43a9-86b4-8e2b84ef0d61.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\author\\got_2aac419f-b3ca-43a9-86b4-8e2b84ef0d61.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\hotd_8a86ca78-36c0-47cd-ad4b-031c873d694e.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/author/hotd_8a86ca78-36c0-47cd-ad4b-031c873d694e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\author\\hotd_8a86ca78-36c0-47cd-ad4b-031c873d694e.jpg"
+    },
+    {
       "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\mark_4c2e11cf-d4f1-4bf1-aa70-58fb16cfb631.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
@@ -797,6 +831,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\author\\mark_91b46f2f-47ab-4647-ae92-336d6fd9afde.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\mark_a3cfcbb7-e8f2-49b2-8e58-1005e4febcf7.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/author/mark_a3cfcbb7-e8f2-49b2-8e58-1005e4febcf7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\author\\mark_a3cfcbb7-e8f2-49b2-8e58-1005e4febcf7.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\R (1)_05cd4258-b886-4af4-8341-2d206205e3e8.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/author/R (1)_05cd4258-b886-4af4-8341-2d206205e3e8.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\author\\R (1)_05cd4258-b886-4af4-8341-2d206205e3e8.jpg"
     },
     {
       "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\R_10e64ed8-c292-491f-b153-b01c083c9f74.jpg",
@@ -952,6 +1020,23 @@
       "OriginalItemSpec": "wwwroot\\image\\book\\got_28316ab7-5918-43d1-9f50-6701accda3f7.jpg"
     },
     {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\got_6a0801fa-316d-40e1-a5d0-291dabbf1cfe.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/book/got_6a0801fa-316d-40e1-a5d0-291dabbf1cfe.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\book\\got_6a0801fa-316d-40e1-a5d0-291dabbf1cfe.jpg"
+    },
+    {
       "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\got_74f613d2-54ef-44ce-b131-c6eef0b2ef73.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
@@ -967,6 +1052,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\book\\got_74f613d2-54ef-44ce-b131-c6eef0b2ef73.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\got_f58bb4fb-cbb9-493d-8ce5-a608acd19472.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/book/got_f58bb4fb-cbb9-493d-8ce5-a608acd19472.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\book\\got_f58bb4fb-cbb9-493d-8ce5-a608acd19472.jpg"
     },
     {
       "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\hotd_0b5816cd-899f-4f39-83e9-ff1aa25c3dd8.jpg",
@@ -986,6 +1088,23 @@
       "OriginalItemSpec": "wwwroot\\image\\book\\hotd_0b5816cd-899f-4f39-83e9-ff1aa25c3dd8.jpg"
     },
     {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\hotd_89bb9a0b-85d9-421e-aca7-136f374e691c.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/book/hotd_89bb9a0b-85d9-421e-aca7-136f374e691c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\book\\hotd_89bb9a0b-85d9-421e-aca7-136f374e691c.jpg"
+    },
+    {
       "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\hotd_bc02c559-9a68-4061-bbab-3f4fcd35c888.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
@@ -1001,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\book\\hotd_bc02c559-9a68-4061-bbab-3f4fcd35c888.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\hotd_beef2bb5-6db2-41c8-a6a6-82e6151da6d3.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/book/hotd_beef2bb5-6db2-41c8-a6a6-82e6151da6d3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\book\\hotd_beef2bb5-6db2-41c8-a6a6-82e6151da6d3.jpg"
     },
     {
       "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\mark_8793221c-daec-4523-aaa1-74572bee82fd.jpg",
@@ -1052,6 +1188,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\book\\R (1)_597ce3dc-4e5b-4c27-bdee-96ec57fda62e.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\R_21be23e0-7517-493c-99f8-2aedce0e82c0.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/book/R_21be23e0-7517-493c-99f8-2aedce0e82c0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\book\\R_21be23e0-7517-493c-99f8-2aedce0e82c0.jpg"
     },
     {
       "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\R_36ab9c73-86a2-45ea-b364-d49353cdc8be.jpg",
@@ -1137,6 +1290,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\book\\R_d13a8fdb-13de-4b20-97c9-ec9ac2672b2a.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\R_d17a47c7-b71d-4421-bfe7-29bebd9549e1.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "image/book/R_d17a47c7-b71d-4421-bfe7-29bebd9549e1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\book\\R_d17a47c7-b71d-4421-bfe7-29bebd9549e1.jpg"
     },
     {
       "Identity": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\js\\site.js",

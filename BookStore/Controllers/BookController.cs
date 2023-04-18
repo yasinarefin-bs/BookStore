@@ -39,19 +39,19 @@ namespace BookStore.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(BookViewModel obj)
+        public IActionResult Create(BookViewModel bookViewModel)
         {
 
             if (ModelState.IsValid)
             {
-                var fileName = ImageUtil.SaveImage(obj.CoverPic, "book", _env);
+                var fileName = ImageUtil.SaveImage(bookViewModel.CoverPic, "book", _env);
 
                 var bookObj = new Book()
                 {
-                    Name = obj.Name,
-                    Description = obj.Description,
-                    Language = obj.Language,
-                    AuthorId= obj.AuthorId,
+                    Name = bookViewModel.Name,
+                    Description = bookViewModel.Description,
+                    Language = bookViewModel.Language,
+                    AuthorId= bookViewModel.AuthorId,
                          
                     CoverPicUrl = $"/image/book/{fileName}"
 
@@ -71,7 +71,7 @@ namespace BookStore.Controllers
             //}
             var authors = _db.Authors.ToList();
             ViewBag.Authors = authors;
-            return View(obj);
+            return View(bookViewModel);
         }
 
         public IActionResult Details(int? id)
@@ -120,22 +120,24 @@ namespace BookStore.Controllers
 
             return View(bookViewModel);
         }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(BookViewModel obj)
+        public IActionResult Update(BookViewModel bookViewModel)
         {
 
             if (ModelState.IsValid)
             {
-                var fileName = ImageUtil.SaveImage(obj.CoverPic, "book", _env);
+                var fileName = ImageUtil.SaveImage(bookViewModel.CoverPic, "book", _env);
 
                 var bookObj = new Book()
                 {
-                    Id = obj.Id,
-                    Name = obj.Name,
-                    Description = obj.Description,
-                    Language = obj.Language,
-                    AuthorId = obj.AuthorId,
+                    Id = bookViewModel.Id,
+                    Name = bookViewModel.Name,
+                    Description = bookViewModel.Description,
+                    Language = bookViewModel.Language,
+                    AuthorId = bookViewModel.AuthorId,
 
                     CoverPicUrl = $"/image/book/{fileName}"
 
@@ -150,7 +152,7 @@ namespace BookStore.Controllers
             var authors = _db.Authors.ToList();
             ViewBag.Authors = authors;
 
-            return View(obj);
+            return View(bookViewModel);
         }
 
 

@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookStore.Models.DbModels
 {
@@ -26,7 +25,8 @@ namespace BookStore.Models.DbModels
         [StringLength(50)]
         public string Language { get; set; }
 
-
+        [Required]
+        [Display(Name = "Cover picture")]
         public string CoverPicUrl { get; set; }
 
         [Required]

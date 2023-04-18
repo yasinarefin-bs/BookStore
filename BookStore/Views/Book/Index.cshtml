@@ -12,9 +12,12 @@
 <a class="btn btn-info" asp-action="Create"> Add new book</a>
 
 
-<table class="table table-bordered table-striped" style="width:100%">
+<table class="table table-bordered table-striped mt-3" style="width:100%">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CoverPicUrl)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
@@ -30,8 +33,12 @@
     <tbody>
         @foreach (var book in Model) {
                 <tr>
+                    <td style="height:170px;width:200px" class="text-center">
+                        <img  src="@book.CoverPicUrl" class="img-fluid" alt="Responsive image">
+                    </td>
                     <td>
-                        @book.Name
+                        <h5 class="font-italic">@book.Name</h5>
+                        
                     </td>
                     <td>
                         @book.Language

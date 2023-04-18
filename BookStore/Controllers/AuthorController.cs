@@ -71,22 +71,24 @@ namespace BookStore.Controllers
             
             return View(authorViewModel);
         }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(AuthorViewModel obj)
+        public IActionResult Update(AuthorViewModel authorViewModel)
         {
             if (ModelState.IsValid)
             {
                 // saves and returns unique filename
-                var fileName = ImageUtil.SaveImage(obj.AuthorPicture, "author", _env);
+                var fileName = ImageUtil.SaveImage(authorViewModel.AuthorPicture, "author", _env);
 
 
                 var authorObj = new Author() 
                 {
-                    Id = obj.Id,
-                    Name = obj.Name,
-                    Email = obj.Email,
-                    Address = obj.Address,
+                    Id = authorViewModel.Id,
+                    Name = authorViewModel.Name,
+                    Email = authorViewModel.Email,
+                    Address = authorViewModel.Address,
                     ImageUrl = $"/image/author/{fileName}"
 
                 };
@@ -96,7 +98,7 @@ namespace BookStore.Controllers
                 TempData["Success"] = "Author created successfully";
                 return RedirectToAction(nameof(Index));
             }
-            return View(obj);
+            return View(authorViewModel);
         }
 
 
@@ -129,19 +131,19 @@ namespace BookStore.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(AuthorViewModel obj)
+        public IActionResult Create(AuthorViewModel authorViewModel)
         {
             if (ModelState.IsValid)
             {
                 // saves and returns unique filename
-                var fileName = ImageUtil.SaveImage(obj.AuthorPicture, "author",  _env);
+                var fileName = ImageUtil.SaveImage(authorViewModel.AuthorPicture, "author",  _env);
 
 
                 var authorObj = new Author()
                 {
-                    Name = obj.Name,
-                    Email = obj.Email,
-                    Address = obj.Address,
+                    Name = authorViewModel.Name,
+                    Email = authorViewModel.Email,
+                    Address = authorViewModel.Address,
                     ImageUrl = $"/image/author/{fileName}"
 
                 };
@@ -151,7 +153,7 @@ namespace BookStore.Controllers
                 TempData["Success"] = "Author created successfully";
                 return RedirectToAction(nameof(Index));
             }
-            return View(obj);
+            return View(authorViewModel);
         }
 
     }
