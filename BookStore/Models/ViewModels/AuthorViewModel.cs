@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using BookStore.Validators;
 
-namespace BookStore.Models
+namespace BookStore.Models.ViewModels
 {
     public class AuthorViewModel
     {
@@ -29,7 +29,7 @@ namespace BookStore.Models
 
         [Required]
         [Display(Name = "Author picture")]
-        [ImageValidator(1024*1024*5)] // 5 MB
+        [ImageValidator(1024 * 1024 * 5)] // 5 MB
         public IFormFile AuthorPicture { get; set; }
     }
 }

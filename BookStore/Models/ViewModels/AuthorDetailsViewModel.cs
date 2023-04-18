@@ -1,4 +1,6 @@
-﻿namespace BookStore.Models
+﻿using BookStore.Models.DbModels;
+
+namespace BookStore.Models.ViewModels
 {
     public class AuthorDetailsViewModel
     {

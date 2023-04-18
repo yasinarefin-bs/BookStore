@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using BookStore.Validators;
 
-namespace BookStore.Models
+namespace BookStore.Models.ViewModels
 {
     public class BookViewModel
     {

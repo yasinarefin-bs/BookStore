@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using BookStore.Util;
 using System.Net;
 using System.Xml.Linq;
+using BookStore.Models.ViewModels;
+using BookStore.Models.DbModels;
 
 namespace BookStore.Controllers
 {

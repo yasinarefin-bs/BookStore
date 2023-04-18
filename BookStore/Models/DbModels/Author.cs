@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.ComponentModel.DataAnnotations;
-namespace BookStore.Models
+
+namespace BookStore.Models.DbModels
 {
     public class Author
     {

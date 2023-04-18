@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\R_10e64ed8-c292-491f-b153-b01c083c9f74.jpg",
+      "PackagePath": "staticwebassets\\image\\author\\R_10e64ed8-c292-491f-b153-b01c083c9f74.jpg"
+    },
+    {
       "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\author\\R_32ca6a06-0df4-4423-beeb-fb33322d4cf5.jpg",
       "PackagePath": "staticwebassets\\image\\author\\R_32ca6a06-0df4-4423-beeb-fb33322d4cf5.jpg"
     },
@@ -103,6 +107,10 @@
     {
       "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\mark_8793221c-daec-4523-aaa1-74572bee82fd.jpg",
       "PackagePath": "staticwebassets\\image\\book\\mark_8793221c-daec-4523-aaa1-74572bee82fd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\image\\book\\mark_caea5e89-1164-4579-af06-a41027f5f356.jpg",
+      "PackagePath": "staticwebassets\\image\\book\\mark_caea5e89-1164-4579-af06-a41027f5f356.jpg"
     },
     {
       "Id": "C:\\Users\\BS823\\Desktop\\C# basis\\BookStore\\BookStore\\wwwroot\\js\\site.js",
