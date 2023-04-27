@@ -8,8 +8,19 @@
 <partial name="_InfoMessage" />
 
 <h1>List of books</h1>
+<div class="d-flex p-2 justify-content-between">
+    <a class="btn btn-info" asp-action="Create"> Add new book</a>
+    <form method="get" class="needs-validation" novalidate>
+        <div class="d-flex">
+            <div class="form-group">
+                <input name="search" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        
+    </form>
+</div>
 
-<a class="btn btn-info" asp-action="Create"> Add new book</a>
 
 
 <table class="table table-bordered table-striped mt-3" style="width:100%">

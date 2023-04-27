@@ -1,11 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
+using System.Net.Mail;
 
 namespace BookStore.Models.DbModels
 {
+
+    [Index(nameof(Name), IsUnique = true, Name ="NameIdx")]
     public class Book
     {
+       
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -14,7 +19,6 @@ namespace BookStore.Models.DbModels
         [StringLength(60)]
         [RegularExpression(@"^[a-zA-Z0-9 ]+$", ErrorMessage = "The name must contain only letters, numbers, and spaces.")]
         [Display(Name = "Book Title")]
-
         public string Name { get; set; }
 
         [Required]

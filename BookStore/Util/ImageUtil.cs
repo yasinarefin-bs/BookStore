@@ -27,7 +27,7 @@ namespace BookStore.Util
             return uniqueFileName;
         }
 
-
+        // incomplete
         public static bool DeleteImage(string filePath, IWebHostEnvironment _env, ILogger<BookController> logger)
         {
             // Get the path to the folder where the image is saved

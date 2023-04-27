@@ -1,3 +1,4 @@
+using BookStore.Validators;
 using BookStpre.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,8 @@ var connectionString = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddDbContext<SqlDbContext>(
     options => options.UseSqlServer(connectionString)
 );
+
+builder.Services.AddScoped<BookValidationService>();
 
 var app = builder.Build();
 

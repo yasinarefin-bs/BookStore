@@ -15,6 +15,5 @@ namespace BookStpre.Data
 
         public DbSet<Author> Authors { get; set; }
 
-
     }
 }

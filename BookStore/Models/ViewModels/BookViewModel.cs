@@ -2,6 +2,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using BookStore.Validators;
+using BookStore.Models.DbModels;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace BookStore.Models.ViewModels
 {
